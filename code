@@ -1,0 +1,33 @@
+n=int(input())
+if n==1:
+    print("You cannot generate christmas tree")
+    quit()
+elif n>20:
+    print("Tree is no more")
+    quit()
+h=1
+m=n
+r=1
+p=n+1
+for i in range(n):
+    h=h+2
+for i in range(n):
+    print('-'*m,end="")
+    print('*'*r)
+    r=r+2
+    m=m-1
+print('*'*h)
+h=h-2
+t=n-1
+p=p-2
+for i in range(n-2):
+    r=3
+    m=t
+    for j in range(p):
+        print('-'*m,end="")
+        print('*'*r)
+        r=r+2
+        m=m-1
+    p=p-1
+print('-'*(n)+'*')
+print('-'*(n)+'*')
