@@ -1,0 +1,21 @@
+p=input()
+b=[p]
+ch='A'
+d={}
+for i in range(10,36):
+    d[ch]=i
+    ch=chr(ord(ch)+1)
+while True:
+    h=str(p)
+    m=list(h)
+    m=(max(m))
+    if m>='A' and m<='Z':
+        m=d[m]
+    else:
+        m=int(m)
+    p=int(str(h),base=m+1)
+    if b.count(str(p))==2:
+        print(p)
+        quit()
+    else:
+        b.append(str(p))
